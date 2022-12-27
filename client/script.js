@@ -77,7 +77,7 @@ const handleSubmit = async (e) => {
   const response = await fetch('https://chatbot-l96s.onrender.com', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       prompt: data.get('prompt')
@@ -100,6 +100,7 @@ const handleSubmit = async (e) => {
     messageDiv.innerHTML = "Có cái gì đó sai sai";
 
     alert(err);
+    console.log(err);
   }
 }
 
